@@ -1,0 +1,32 @@
+[
+  {
+    "nome": "Jovens",
+    "descricao": "Reúne a juventude das igrejas da região em encontros, congressos e ações de serviço.",
+    "lider": "",
+    "whatsapp": ""
+  },
+  {
+    "nome": "Mulheres",
+    "descricao": "Integra e apoia as mulheres das igrejas da região, com encontros, estudo e ação social.",
+    "lider": "",
+    "whatsapp": ""
+  },
+  {
+    "nome": "Crianças e Adolescentes",
+    "descricao": "Cuida do ensino bíblico e da formação de crianças e adolescentes nas igrejas.",
+    "lider": "",
+    "whatsapp": ""
+  },
+  {
+    "nome": "Missões",
+    "descricao": "Coordena o trabalho de evangelização e a abertura de novas frentes na região.",
+    "lider": "",
+    "whatsapp": ""
+  },
+  {
+    "nome": "Celebração",
+    "descricao": "Orienta a música e a condução dos cultos nas igrejas da região.",
+    "lider": "",
+    "whatsapp": ""
+  }
+]

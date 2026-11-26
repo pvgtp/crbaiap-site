@@ -1,0 +1,1 @@
+Coloque aqui os arquivos da página Downloads (PDF, DOCX etc.) e cadastre cada um em dados/downloads.json.
