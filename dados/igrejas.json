@@ -1,1 +1,12 @@
-[]
+[
+  {
+    "municipio": "Santarém",
+    "uf": "PA",
+    "nome": "Igreja Adventista da Promessa",
+    "endereco": "Avenida Doutor Anísio Chaves, 1358, Jardim Santarém, CEP 68030-360",
+    "pastor": "",
+    "cultos": "",
+    "mapa": "https://www.google.com/maps/search/?api=1&query=Avenida+Doutor+An%C3%ADsio+Chaves%2C+1358%2C+Jardim+Santar%C3%A9m%2C+Santar%C3%A9m+-+PA",
+    "whatsapp": ""
+  }
+]

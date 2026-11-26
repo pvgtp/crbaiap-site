@@ -24,6 +24,8 @@ Regras do JSON: textos entre aspas duplas, itens separados por vírgula e sem v�
 }
 ```
 
+Em `instagram` vale `@usuario` ou o link do perfil; em `facebook`, o link da página. Se só houver o nome do perfil, escreva o nome: ele aparece na página Contato sem link, até o endereço certo ser informado.
+
 ### `dados/igrejas.json` — página Igrejas
 
 Só `nome` e `municipio` são obrigatórios. As igrejas são agrupadas por município e ordenadas por nome. A busca aparece sozinha a partir de 6 igrejas.

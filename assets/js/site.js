@@ -100,9 +100,17 @@
     if (/^[^@\s]+@[^@\s]+\.[^@\s]+$/.test(email)) lista.push({ rotulo: 'E-mail', texto: email, href: 'mailto:' + email });
     var w = whatsapp(s.whatsapp);
     if (w) lista.push({ rotulo: 'WhatsApp', texto: w.texto, href: w.href, externo: true });
-    var insta = texto(s.instagram).replace(/^https?:\/\/(www\.)?instagram\.com\//i, '').replace(/^@/, '').replace(/\/.*$/, '');
-    if (insta) lista.push({ rotulo: 'Instagram', texto: '@' + insta, href: 'https://www.instagram.com/' + encodeURIComponent(insta) + '/', externo: true });
+    /* Instagram: aceita @usuario ou o link do perfil. Se vier só o nome do perfil (com espaços), mostra o nome sem link. */
+    var insta = texto(s.instagram);
+    if (/\s/.test(insta)) {
+      lista.push({ rotulo: 'Instagram', texto: insta, soNome: true });
+    } else {
+      insta = insta.replace(/^https?:\/\/(www\.)?instagram\.com\//i, '').replace(/^@/, '').replace(/[\/?#].*$/, '');
+      if (insta) lista.push({ rotulo: 'Instagram', texto: '@' + insta, href: 'https://www.instagram.com/' + encodeURIComponent(insta) + '/', externo: true });
+    }
+    /* Facebook: com o link, vira link; só com o nome da página, mostra o nome sem link. */
     if (linkSeguro(s.facebook)) lista.push({ rotulo: 'Facebook', texto: 'Página no Facebook', href: linkSeguro(s.facebook), externo: true });
+    else if (texto(s.facebook)) lista.push({ rotulo: 'Facebook', texto: texto(s.facebook), soNome: true });
     if (linkSeguro(s.youtube)) lista.push({ rotulo: 'YouTube', texto: 'Canal no YouTube', href: linkSeguro(s.youtube), externo: true });
     if (texto(s.endereco)) lista.push({ rotulo: 'Endereço', texto: texto(s.endereco) });
     if (texto(s.atendimento)) lista.push({ rotulo: 'Atendimento', texto: texto(s.atendimento) });
@@ -122,7 +130,7 @@
       if (rodapeContatos && lista.length) {
         var ul = rodapeContatos.querySelector('ul');
         lista.forEach(function (c) {
-          if (c.rotulo === 'Atendimento') return;
+          if (c.rotulo === 'Atendimento' || c.soNome) return;
           ul.appendChild(el('li', null, linkCanal(c)));
         });
         rodapeContatos.hidden = false;

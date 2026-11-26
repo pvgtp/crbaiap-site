@@ -1,1 +1,18 @@
-[]
+[
+  {
+    "cargo": "Superintendente",
+    "nome": "Jandre Célio Cardoso da Silva"
+  },
+  {
+    "cargo": "Vice-superintendente",
+    "nome": "Joel Lima da Silva"
+  },
+  {
+    "cargo": "Diretor Financeiro",
+    "nome": "Josimo Evanildo Sarmento"
+  },
+  {
+    "cargo": "Secretário",
+    "nome": "Mailton Assunção Pinheiro"
+  }
+]
